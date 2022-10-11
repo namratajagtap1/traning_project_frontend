@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.text-center{
+    text-align: center;
+}
+
+.container img{
+    width:160px;
+    height: 120px;
+   margin-top:5px;
+   border: 0.5px rgb(206, 33, 13);
+   } 
+
+   mt20{
+    margin-top:20px;
+   }
+
+   .mb20{
+    margin-bottom: 20px;
+   }
+
+   .mr10{
+    margin-right: 10px;
+   }
+
+   .ml10{
+    margin-left: 10px;
+   }

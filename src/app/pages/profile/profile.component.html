@@ -1,0 +1,48 @@
+<mat-card>
+    <h3>Welcome to profile</h3>
+    <mat-card-content>
+{{user|json}}
+    <div class="bootstrap-wrapper" >
+        <div class="container">
+            <div class="container text-center">
+                <img src="../../../assets/defaultimage.jpg"/>
+
+                <h1 style="margin-top:20px;">{{login.getUser().firstName}} {{login.getUser().lastName}}</h1>
+            </div>
+            <div class="row">
+                <div class="col-md-10 offset-md-1">
+
+                    <table class="table text-center ">
+                        <tr>
+                            <td>Username</td>
+                            <td>{{login.getUser().userName}}</td>
+                        </tr>
+                        <tr>
+                            <td>userId</td>
+                            <td>{{login.getUser().id}}</td>
+                        </tr>
+                        <tr>
+                            <td>Phone</td>
+                            <td>{{login.getUser().mobNo}}</td>
+                        </tr>
+                        <tr>
+                            <td>Role</td>
+                            <td>{{login.getUser().authorities[0].authority}}</td>
+                        </tr>
+
+                        <tr>
+                            <td>Staus</td>
+                            <td>{{login.getUser().enabled?"ACTIVE":"NOTACTIVE"}}</td>
+                        </tr>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </mat-card-content>
+    <mat-card-actions class="text-center">
+        <button mat-raised-button color="primary">Update</button>
+        <button mat-raised-button color="accent">SHARE</button>
+      </mat-card-actions>
+</mat-card>
