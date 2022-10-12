@@ -1,7 +1,7 @@
 <mat-card>
-    <mat-action-list class="butStyle">
+    <mat-action-list>
         <div mat-subheader>Menu</div>
-       <button mat-list-item style="background-color:rgb(219, 163, 219);">
+       <button class="butStyle" mat-list-item style="background-color:rgb(219, 163, 219);">
         <mat-icon mat-list-icon>home</mat-icon>Home</button>
        <button mat-list-item style="background-color:rgb(219, 163, 219);margin-top: 10px;"
         routerLink="/admin/profile"><mat-icon mat-list-icon>account_circle</mat-icon>Profile</button>
@@ -9,5 +9,9 @@
         routerLink="/admin/categories"><mat-icon mat-list-icon>list</mat-icon>Categories</button>
        <button mat-list-item style="background-color:rgb(219, 163, 219);margin-top: 10px;"
         routerLink="/admin/add-categories"><mat-icon mat-list-icon>add_shopping_cart</mat-icon>Add Categories</button>
+        <button mat-list-item style="background-color:rgb(219, 163, 219);margin-top: 10px;"
+        routerLink="/admin/products"><mat-icon mat-list-icon>reorder</mat-icon>Products</button>
+        <button mat-list-item style="background-color:rgb(219, 163, 219);margin-top: 10px;"
+        routerLink="/admin/add-product"><mat-icon mat-list-icon>addtoqueue</mat-icon>Add Products</button>
     </mat-action-list>
 </mat-card>

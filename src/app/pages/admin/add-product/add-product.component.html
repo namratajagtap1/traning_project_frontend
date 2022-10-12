@@ -1,0 +1,55 @@
+<mat-card>
+    <h1>Add Product here</h1>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+
+                <form (ngSubmit)="formsubmit()">
+                    <!-- name -->
+                    <mat-form-field class="w100"  appearance="fill">
+                        <mat-label>ProductName</mat-label>
+                    <input  type="text" name="pName" matInput placeholder="Enter product Name" [(ngModel)]="productData.pName"/>
+                    </mat-form-field>
+                     <!-- price -->
+                    <mat-form-field class="w100"  appearance="fill">
+                        <mat-label>Price</mat-label>
+                    <input [(ngModel)]="productData.price" type="text" name="price" matInput placeholder="Enter product price"/>
+                    </mat-form-field>
+                     <!-- discount -->
+                    <mat-form-field class="w100"  appearance="fill">
+                        <mat-label>Discount</mat-label>
+                    <input [(ngModel)]="productData.discount" type="text" name="discount" matInput placeholder="Enter product Discount"/>
+                    </mat-form-field>
+
+                      <!-- numOfproduct -->
+                      <mat-form-field class="w100"  appearance="fill">
+                        <mat-label>numOfproduct</mat-label>
+                    <input [(ngModel)]="productData.numOfproduct" type="text" name="numOfproduct" matInput placeholder="Enter product numOfproduct"/>
+                    </mat-form-field>
+
+                    <!-- product available or not -->
+                    <mat-slide-toggle name="available" [(ngModel)]="productData.available" class="mt20">
+                 if available</mat-slide-toggle>
+                 <br>
+                 <!-- select category -->
+
+                 <mat-form-field appearance="fill" class="mt20 w100">
+                    <mat-label>category</mat-label>
+                    <mat-select  name="category" [(ngModel)]="productData.category.catId" >
+                      <mat-option *ngFor="let cat of categories" [value]="cat.catId">
+                        {{cat.name}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+
+                  <div class="container text-center" style="margin-top:20px;">
+                    <button type="submit" mat-raised-button color="primary">Add</button>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</mat-card>
+
+

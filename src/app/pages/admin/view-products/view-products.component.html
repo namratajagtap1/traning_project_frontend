@@ -1,0 +1,70 @@
+<!-- <mat-card style="margin-top:15px;margin-right:20px;" *ngFor="let pro of productObj">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>{{pro.pName}}</mat-card-title>
+<mat-card-subtitle> {{pro.pId}}</mat-card-subtitle>
+       
+
+    </mat-card-header>
+</mat-card> -->
+<mat-card>
+<div class="example-container mat-elevation-z8">
+    <mat-table #table [dataSource]="productObj">
+  
+      <!--- Note that these columns can be defined in any order.
+            The actual rendered columns are set as a property on the row definition" -->
+  
+      <!-- Position Column -->
+      <ng-container matColumnDef="position">
+        <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.pId}} </mat-cell>
+      </ng-container>
+  
+      <!-- Name Column -->
+      <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.pName}} </mat-cell>
+      </ng-container>
+  
+      <!-- Weight Column -->
+      <ng-container matColumnDef="price">
+        <mat-header-cell *matHeaderCellDef> price </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.price}} </mat-cell>
+      </ng-container>
+  
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="discount">
+        <mat-header-cell *matHeaderCellDef> discount </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.discount}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="numOfproduct">
+        <mat-header-cell *matHeaderCellDef> numOfproduct </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.numOfproduct}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="category">
+        <mat-header-cell *matHeaderCellDef> category </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.category.name}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="update">
+        <mat-header-cell *matHeaderCellDef> Update </mat-header-cell>
+        <mat-cell *matCellDef="let element"><button mat-raised-button style="background-color:rgb(143, 143, 245);">Update</button></mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="delete">
+        <mat-header-cell *matHeaderCellDef> Delete </mat-header-cell>
+        <mat-cell *matCellDef="let element"><button mat-raised-button style="background-color:rgb(255, 0, 0);">Delete</button>  </mat-cell>
+      </ng-container>
+
+  
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+  </div>
+</mat-card>
+
+<div class="container text-center mt20">
+    <button routerLink="/admin/add-product" mat-raised-button color="primary">Add New Products</button>
+</div>

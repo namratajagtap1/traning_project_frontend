@@ -11,6 +11,8 @@ import { CustomerGuard } from './services/customer.guard';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { CategoryComponent } from './pages/admin/category/category.component';
 import { AddCategoryComponent } from './pages/admin/add-category/add-category.component';
+import { ViewProductsComponent } from './pages/admin/view-products/view-products.component';
+import { AddProductComponent } from './pages/admin/add-product/add-product.component';
 
 const routes: Routes = [
   
@@ -33,6 +35,12 @@ const routes: Routes = [
     },
     {
       path:'add-categories',component:AddCategoryComponent
+    } ,
+    {
+      path:'products',component:ViewProductsComponent
+    } , 
+    {
+      path:'add-product',component:AddProductComponent
     }  
     ],
   },

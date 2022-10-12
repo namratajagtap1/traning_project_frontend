@@ -1,0 +1,5 @@
+
+.example-header-image {
+    background-image: url('../../../../assets/product1.jpeg'); 
+    background-size: cover;
+  }

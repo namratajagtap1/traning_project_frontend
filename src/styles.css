@@ -14,7 +14,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
    border: 0.5px rgb(206, 33, 13);
    } 
 
-   mt20{
+   .mt20{
     margin-top:20px;
    }
 

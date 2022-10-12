@@ -26,6 +26,11 @@ import {MatListModule} from '@angular/material/list';
 import { SidebarComponent } from './pages/admin/sidebar/sidebar.component';
 import { CategoryComponent } from './pages/admin/category/category.component';
 import { AddCategoryComponent } from './pages/admin/add-category/add-category.component';
+import { ViewProductsComponent } from './pages/admin/view-products/view-products.component';
+import { AddProductComponent } from './pages/admin/add-product/add-product.component';
+import {MatTableModule} from '@angular/material/table';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -41,6 +46,8 @@ import { AddCategoryComponent } from './pages/admin/add-category/add-category.co
     SidebarComponent,
     CategoryComponent,
     AddCategoryComponent,
+    ViewProductsComponent,
+    AddProductComponent,
    
   ],
   imports: [
@@ -57,7 +64,9 @@ import { AddCategoryComponent } from './pages/admin/add-category/add-category.co
    MatIconModule,
    MatSnackBarModule,
    MatListModule,
-   
+   MatTableModule,
+   MatSlideToggleModule,
+   MatSelectModule,
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
